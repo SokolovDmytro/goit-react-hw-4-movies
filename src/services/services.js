@@ -1,0 +1,14 @@
+import axios from 'axios';
+
+axios.defaults.baseURL = 'https://api.themoviedb.org/3';
+const KEY = '5f9a44050be471541d18dee0a2167240';
+
+export const getTrending = () => axios.get(`/trending/all/day?api_key=${KEY}`);
+export const getMovie = id =>
+  axios.get(`/movie/${id}?api_key=${KEY}&language=en-US`);
+
+export const getCast = id => axios.get(`/movie/${id}/credits?api_key=${KEY}`);
+export const getReview = id =>
+  axios.get(`/movie/${id}/reviews?api_key=${KEY}&language=en-US&page=1`);
+export const searchMovie = movie =>
+  axios.get(`/search/movie?api_key=${KEY}&query=${movie}`);

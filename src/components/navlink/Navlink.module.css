@@ -1,0 +1,18 @@
+.links {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    text-decoration: none;
+    width: 300px;
+  }
+  
+  .link {
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  .active-link {
+    color: brown;
+  }
